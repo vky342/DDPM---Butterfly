@@ -1,10 +1,3 @@
-# DDPM---Butterfly
-Experimenting with a simple denoising diffusion probabilistic model.
-
-Below is a polished `README.md` you can drop into your repo. I wrote it in a way that documents your learning journey, the theory behind DDPM, and your Butterfly generator experiment, with key formulas and a concise U‑Net overview.
-
----
-
 # Diffusion Models from Scratch — DDPM + Butterfly Generator 🦋
 
 This repository documents my learning journey building **Denoising Diffusion Probabilistic Models (DDPMs)** from first principles and validating the theory through experiments. It includes:
@@ -51,8 +44,9 @@ A **diffusion model** learns to invert a gradual noising process. During trainin
 We progressively add Gaussian noise with a variance schedule $\{\beta_t\}_{t=1}^T$.
 
 $$
-q(x_t \mid x_{t-1}) = \mathcal{N}\left(x_t;\; \sqrt{1-\beta_t}\,x_{t-1},\; \beta_t \mathbf{I}\right),
-\quad \alpha_t = 1 - \beta_t,\quad \bar{\alpha}_t = \prod_{s=1}^t \alpha_s
+q(x_t \mid x_{t-1}) = \mathcal{N}\left(x_t;\; \sqrt{1 - \beta_t}\, x_{t-1},\; \beta_t \mathbf{I} \right) \\
+\alpha_t = 1 - \beta_t \\
+\bar{\alpha}_t = \prod_{s=1}^t \alpha_s
 $$
 
 A closed form exists that jumps from $x_0$ to any $x_t$:
