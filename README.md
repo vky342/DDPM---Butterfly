@@ -66,10 +66,7 @@ $$
 
 Using noise‑prediction parameterization (from the paper), the mean is:
 
-$$
-\mu_\theta(x_t, t) 
-= \frac{1}{\sqrt{\alpha_t}}\left(x_t - \frac{\beta_t}{\sqrt{1-\bar{\alpha}_t}}\,\varepsilon_\theta(x_t, t)\right)
-$$
+μ_θ(x_t, t) = 1 / sqrt(alpha_t) * (x_t - (beta_t / sqrt(1 - alphā_t)) * ε_θ(x_t, t))
 
 (With $\sigma_t^2$ typically set to a fixed or learned variance per timestep—DDPM uses fixed variance; improved variants learn it.)
 
