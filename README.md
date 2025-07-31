@@ -50,8 +50,10 @@ A **diffusion model** learns to invert a gradual noising process. During trainin
 
 We progressively add Gaussian noise with a variance schedule $\{\beta_t\}_{t=1}^T$.
 
-$q(x_t \mid x_{t-1}) = \mathcal{N}\left(x_t;\; \sqrt{1-\beta_t}\,x_{t-1},\; \beta_t \mathbf{I}\right),
-\quad \alpha_t = 1 - \beta_t,\quad \bar{\alpha}_t = \prod_{s=1}^t \alpha_s$.
+$$
+q(x_t \mid x_{t-1}) = \mathcal{N}\left(x_t;\; \sqrt{1-\beta_t}\,x_{t-1},\; \beta_t \mathbf{I}\right),
+\quad \alpha_t = 1 - \beta_t,\quad \bar{\alpha}_t = \prod_{s=1}^t \alpha_s
+$$
 
 A closed form exists that jumps from $x_0$ to any $x_t$:
 
