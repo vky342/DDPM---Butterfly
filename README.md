@@ -74,11 +74,7 @@ Using noise‑prediction parameterization (from the paper), the mean is:
 
 The variational bound reduces to a simple MSE on the noise:
 
-$$
-\mathcal{L}_{\text{simple}}(\theta) 
-= \mathbb{E}_{t, x_0, \varepsilon}\left[\; \left\| \varepsilon - \varepsilon_\theta\big(x_t, t\big) \right\|_2^2 \; \right],
-\quad \text{where } x_t = \sqrt{\bar{\alpha}_t}\,x_0 + \sqrt{1-\bar{\alpha}_t}\,\varepsilon
-$$
+L_simple = E_{x_0, ε, t} [ || ε - ε_θ(x_t, t) ||^2 ]
 
 ### 4) Sampling loop (high‑level)
 
